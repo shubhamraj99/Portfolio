@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shubham Raj — Developer & Problem Solver</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabinet+Grotesk:wght@300;400;500;700;800;900&family=JetBrains+Mono:ital,wght@0,200;0,400;0,700;1,200&display=swap" rel="stylesheet">
+</head>
+<body class="loading">
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-bar"></div>
+      <div class="loader-text"><span id="loaderPct">0</span>%</div>
+      <div class="loader-name">SHUBHAM RAJ</div>
+    </div>
+  </div>
+
+  <!-- NOISE OVERLAY -->
+  <canvas class="noise-canvas" id="noiseCanvas"></canvas>
+
+  <!-- PARTICLE CANVAS -->
+  <canvas class="particle-canvas" id="particleCanvas"></canvas>
+
+  <!-- AURORA BG -->
+  <div class="aurora">
+    <div class="aurora-blob a1"></div>
+    <div class="aurora-blob a2"></div>
+    <div class="aurora-blob a3"></div>
+  </div>
+
+  <!-- CURSOR -->
+  <div class="cursor-outer" id="cursorOuter"></div>
+  <div class="cursor-inner" id="cursorInner"></div>
+  <div class="cursor-trail-container" id="trailContainer"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>
+      <span class="logo-text glitch-subtle" data-text="SR">SR</span>
+      <span class="logo-bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link"><span class="nav-num">01.</span>about</a></li>
+      <li><a href="#skills" class="nav-link"><span class="nav-num">02.</span>skills</a></li>
+      <li><a href="#projects" class="nav-link"><span class="nav-num">03.</span>projects</a></li>
+      <li><a href="#education" class="nav-link"><span class="nav-num">04.</span>education</a></li>
+      <li><a href="#contact" class="nav-link"><span class="nav-num">05.</span>contact</a></li>
+    </ul>
+    <a href="mailto:shubhamraj227399@gmail.com" class="nav-cta magnetic" data-magnetic>hire me ↗</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mob-link">about</a></li>
+      <li><a href="#skills" class="mob-link">skills</a></li>
+      <li><a href="#projects" class="mob-link">projects</a></li>
+      <li><a href="#education" class="mob-link">education</a></li>
+      <li><a href="#contact" class="mob-link">contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text">DEVELOPER</div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span>BTech CSE · Galgotias University · 2023–2027</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-row">
+          <span class="title-word" data-delay="0">SHUBHAM</span>
+        </span>
+        <span class="title-row row2">
+          <span class="title-word outline" data-delay="1">RAJ</span>
+          <span class="title-accent">✦</span>
+        </span>
+      </h1>
+      <div class="hero-desc">
+        <div class="desc-line"></div>
+        <p><span class="typed-wrap"><span id="typed"></span><span class="typed-cur">_</span></span></p>
+      </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-mag magnetic" data-magnetic>
+          <span class="btn-text">View Work</span>
+          <span class="btn-icon">→</span>
+          <span class="btn-fill"></span>
+        </a>
+        <a href="#contact" class="btn-outline magnetic" data-magnetic>
+          <span>Let's Talk</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-photo-wrap">
+        <div class="photo-glow"></div>
+        <div class="photo-frame">
+          <img src="profile.jpg" alt="Shubham Raj" class="hero-photo" onerror="this.parentElement.innerHTML='<div class=hero-initials>SR</div>'"/>
+          <div class="photo-scanline"></div>
+        </div>
+        <div class="photo-orbit">
+          <div class="orbit-ring r1">
+            <div class="orbit-dot"></div>
+          </div>
+          <div class="orbit-ring r2">
+            <div class="orbit-dot d2"></div>
+          </div>
+        </div>
+        <div class="floating-badge b1">Problem<br>Solver</div>
+        <div class="floating-badge b2">6th Sem</div>
+        <div class="floating-badge b3">CSE</div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>scroll down</span>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hstat">
+        <span class="hstat-n" data-count="6">0</span><span class="hstat-s">th</span>
+        <span class="hstat-l">Semester</span>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <span class="hstat-n" data-count="3">0</span><span class="hstat-s">+</span>
+        <span class="hstat-l">Projects</span>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <span class="hstat-n">∞</span>
+        <span class="hstat-l">Passion</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section class="section about" id="about">
+    <div class="section-tag reveal-tag">01 / about_me</div>
+    <div class="about-layout">
+      <div class="about-left">
+        <h2 class="section-heading reveal-heading">
+          <span>Building things</span>
+          <span class="heading-accent">that matter.</span>
+        </h2>
+        <div class="about-body reveal-body">
+          <p>Hey! I'm <strong>Shubham Raj</strong>, a CSE student at Galgotias University, Greater Noida — currently in my <strong>6th semester</strong>. I'm obsessed with solving hard problems through elegant code.</p>
+          <p>I thrive at the crossroads of <em>logic and creativity</em> — whether it's designing efficient algorithms, wrangling data in Excel, or shipping full-stack apps. Always learning. Always building.</p>
+        </div>
+        <div class="about-socials reveal-socials">
+          <a href="https://www.linkedin.com/in/shubhamraj-4b8838319" target="_blank" class="social-pill magnetic" data-magnetic>
+            <span class="pill-icon">in</span><span>LinkedIn</span>
+          </a>
+          <a href="mailto:shubhamraj227399@gmail.com" class="social-pill magnetic" data-magnetic>
+            <span class="pill-icon">@</span><span>Email</span>
+          </a>
+          <a href="https://github.com" target="_blank" class="social-pill magnetic" data-magnetic>
+            <span class="pill-icon">gh</span><span>GitHub</span>
+          </a>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="about-photo-card reveal-card" id="tiltCard1">
+          <div class="apc-inner">
+            <img src="profile.jpg" alt="Shubham Raj" class="apc-img" onerror="this.style.display='none'"/>
+            <div class="apc-overlay">
+              <div class="apc-tag">@shubhamraj</div>
+              <div class="apc-name">Shubham Raj</div>
+              <div class="apc-sub">CSE · Delhi, India</div>
+            </div>
+            <div class="apc-corner tl"></div>
+            <div class="apc-corner tr"></div>
+            <div class="apc-corner bl"></div>
+            <div class="apc-corner br"></div>
+          </div>
+        </div>
+        <div class="about-mini-cards">
+          <div class="mini-card mc1 reveal-mc">
+            <span class="mc-icon">🎯</span>
+            <span class="mc-text">Problem Solver</span>
+          </div>
+          <div class="mini-card mc2 reveal-mc">
+            <span class="mc-icon">📊</span>
+            <span class="mc-text">Excel Wizard</span>
+          </div>
+          <div class="mini-card mc3 reveal-mc">
+            <span class="mc-icon">💻</span>
+            <span class="mc-text">Code Enthusiast</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-inner" id="marqueeInner">
+        <span>Problem Solving</span><span class="mx">✦</span>
+        <span>Microsoft Excel</span><span class="mx">✦</span>
+        <span>Data Structures</span><span class="mx">✦</span>
+        <span>Algorithms</span><span class="mx">✦</span>
+        <span>Java</span><span class="mx">✦</span>
+        <span>Python</span><span class="mx">✦</span>
+        <span>Web Dev</span><span class="mx">✦</span>
+        <span>Git & GitHub</span><span class="mx">✦</span>
+        <span>Problem Solving</span><span class="mx">✦</span>
+        <span>Microsoft Excel</span><span class="mx">✦</span>
+        <span>Data Structures</span><span class="mx">✦</span>
+        <span>Algorithms</span><span class="mx">✦</span>
+        <span>Java</span><span class="mx">✦</span>
+        <span>Python</span><span class="mx">✦</span>
+        <span>Web Dev</span><span class="mx">✦</span>
+        <span>Git & GitHub</span><span class="mx">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ SKILLS ═══════════════ -->
+  <section class="section skills" id="skills">
+    <div class="section-tag reveal-tag">02 / skills</div>
+    <h2 class="section-heading reveal-heading">
+      <span>What I bring</span>
+      <span class="heading-accent">to the table.</span>
+    </h2>
+    <div class="skills-bento">
+      <div class="bento-card bc-large reveal-bento" id="tiltCard2">
+        <div class="bc-label">Core Strength</div>
+        <div class="bc-title">Problem<br>Solving</div>
+        <div class="bc-meter">
+          <div class="bc-meter-fill" data-width="92"></div>
+        </div>
+        <div class="bc-pct">92%</div>
+        <div class="bc-glow"></div>
+      </div>
+      <div class="bento-card bc-med reveal-bento" id="tiltCard3">
+        <div class="bc-label">Tool Mastery</div>
+        <div class="bc-title">Microsoft<br>Excel</div>
+        <div class="bc-meter">
+          <div class="bc-meter-fill" data-width="87"></div>
+        </div>
+        <div class="bc-pct">87%</div>
+      </div>
+      <div class="bento-card bc-small reveal-bento">
+        <div class="bc-label">Language</div>
+        <div class="bc-title">Java</div>
+        <div class="skill-dots">
+          <span class="sdot active"></span><span class="sdot active"></span><span class="sdot active"></span><span class="sdot active"></span><span class="sdot"></span>
+        </div>
+      </div>
+      <div class="bento-card bc-small reveal-bento">
+        <div class="bc-label">Language</div>
+        <div class="bc-title">Python</div>
+        <div class="skill-dots">
+          <span class="sdot active"></span><span class="sdot active"></span><span class="sdot active"></span><span class="sdot active"></span><span class="sdot"></span>
+        </div>
+      </div>
+      <div class="bento-card bc-med reveal-bento">
+        <div class="bc-label">Fundamentals</div>
+        <div class="bc-title">DSA</div>
+        <div class="bc-meter">
+          <div class="bc-meter-fill" data-width="80"></div>
+        </div>
+        <div class="bc-pct">80%</div>
+      </div>
+      <div class="bento-card bc-small reveal-bento">
+        <div class="bc-label">Web</div>
+        <div class="bc-title">HTML/CSS</div>
+        <div class="skill-dots">
+          <span class="sdot active"></span><span class="sdot active"></span><span class="sdot active"></span><span class="sdot"></span><span class="sdot"></span>
+        </div>
+      </div>
+      <div class="bento-card bc-small reveal-bento">
+        <div class="bc-label">Workflow</div>
+        <div class="bc-title">Git</div>
+        <div class="skill-dots">
+          <span class="sdot active"></span><span class="sdot active"></span><span class="sdot active"></span><span class="sdot active"></span><span class="sdot"></span>
+        </div>
+      </div>
+      <div class="bento-card bc-wide reveal-bento">
+        <div class="bc-label">Soft Skills</div>
+        <div class="soft-tags">
+          <span>Communication</span>
+          <span>Team Work</span>
+          <span>Adaptability</span>
+          <span>Time Management</span>
+          <span>Leadership</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROJECTS ═══════════════ -->
+  <section class="section projects" id="projects">
+    <div class="section-tag reveal-tag">02 / projects</div>
+    <h2 class="section-heading reveal-heading">
+      <span>Things I've</span>
+      <span class="heading-accent">built.</span>
+    </h2>
+    <div class="projects-list">
+
+      <div class="project-row reveal-project" id="tiltProj1">
+        <div class="pr-num">01</div>
+        <div class="pr-info">
+          <div class="pr-tags"><span>React.js</span><span>Vite</span><span>JavaScript</span><span>ReCharts</span><span>WebKit API</span></span></div>
+          <h3 class="pr-title">The Examiner (mock-test-platform)</h3>
+          <p class="pr-desc">Engineered a dual-role Single Page Application (SPA) using React.js and Vite, featuring separate secure
+authentication flows and dashboards for Faculty (test creation) and Students (test taking).</p>
+        </div>
+        <div class="pr-right">
+          <div class="pr-status live">● Live</div>
+          <a href="https://github.com/shubhamraj99/mock-test-platform" class="pr-btn magnetic" data-magnetic>View ↗</a>
+        </div>
+        <div class="pr-hover-img">
+          <div class="pr-hover-placeholder">
+            <span>The Examiner<br>(mock-test-platform)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row reveal-project featured-row" id="tiltProj2">
+        <div class="pr-num">02</div>
+        <div class="pr-info">
+          <div class="pr-tags"><span>Swift</span><span>SwiftUI</span><span>Xcode</div>
+          <h3 class="pr-title">Edu-Parent Connect (IOS App Development) <span class="feat-pill">Featured</span></h3>
+          <p class="pr-desc">Developed a native iOS application designed to bridge the academic information gap, providing real-time visibility
+into student attendance, grades, and daily performance.</p>
+        </div>
+        <div class="pr-right">
+          <div class="pr-status live">● Live</div>
+          <a href="#" class="pr-btn magnetic" data-magnetic>View ↗</a>
+        </div>
+        <div class="pr-hover-img">
+          <div class="pr-hover-placeholder">
+            <span>Edu-Parent Connect<br>(IOS App Development)</span>
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+  <!-- ═══════════════ EDUCATION ═══════════════ -->
+  <section class="section education" id="education">
+    <div class="section-tag reveal-tag">04 / education</div>
+    <h2 class="section-heading reveal-heading">
+      <span>Where I've</span>
+      <span class="heading-accent">studied.</span>
+    </h2>
+    <div class="edu-cards">
+      <div class="edu-card-new current reveal-edu" id="tiltEdu">
+        <div class="ecn-year">2023 — 2027</div>
+        <div class="ecn-badge">Currently Enrolled ✦</div>
+        <h3 class="ecn-degree">B.Tech — Computer Science & Engineering</h3>
+        <div class="ecn-school">Galgotias University, Greater Noida</div>
+        <p class="ecn-detail">6th Semester · Specializing in Data Structures, Algorithms, Operating Systems, DBMS, and Software Engineering principles.</p>
+        <div class="ecn-courses">
+          <span>DSA</span><span>OS</span><span>DBMS</span><span>SE</span><span>CN</span>
+        </div>
+        <div class="ecn-glow"></div>
+      </div>
+      <div class="edu-card-new reveal-edu">
+        <div class="ecn-year">Before 2023</div>
+        <h3 class="ecn-degree">12th Standard</h3>
+        <div class="ecn-school">Krishak College, Nawada(Bihar)</div>
+        <p class="ecn-detail">Science stream · Mathematics, Physics, Computer Science.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section class="section contact" id="contact">
+    <div class="section-tag reveal-tag">05 / contact</div>
+    <div class="contact-layout">
+      <div class="contact-left">
+        <h2 class="section-heading reveal-heading contact-h">
+          <span>Let's build</span>
+          <span class="heading-accent">something</span>
+          <span>together.</span>
+        </h2>
+        <p class="contact-sub reveal-body">Open to internships, collaborations, and exciting project ideas. Don't hesitate to reach out — my inbox is always open!</p>
+        <a href="mailto:shubhamraj227399@gmail.com" class="contact-big-btn magnetic reveal-body" data-magnetic>
+          <span>Say Hello ↗</span>
+          <div class="cbb-fill"></div>
+        </a>
+      </div>
+      <div class="contact-right">
+        <div class="contact-cards">
+          <a href="mailto:shubhamraj227399@gmail.com" class="cc-card reveal-cc magnetic" data-magnetic>
+            <div class="cc-icon">✉</div>
+            <div>
+              <div class="cc-type">Email</div>
+              <div class="cc-val">shubhamraj227399@gmail.com</div>
+            </div>
+            <span class="cc-arr">→</span>
+          </a>
+          <a href="https://www.linkedin.com/in/shubhamraj-4b8838319" target="_blank" class="cc-card reveal-cc magnetic" data-magnetic>
+            <div class="cc-icon">in</div>
+            <div>
+              <div class="cc-type">LinkedIn</div>
+              <div class="cc-val">shubhamraj-4b8838319</div>
+            </div>
+            <span class="cc-arr">→</span>
+          </a>
+          <a href="https://github.com/shubhamraj99" target="_blank" class="cc-card reveal-cc magnetic" data-magnetic>
+            <div class="cc-icon">gh</div>
+            <div>
+              <div class="cc-type">GitHub</div>
+              <div class="cc-val">shubhamraj99</div>
+            </div>
+            <span class="cc-arr">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">
+      <span class="footer-logo">SR</span>
+      <span>© 2025 Shubham Raj</span>
+    </div>
+    <div class="footer-center">Delhi, India 🇮🇳</div>
+    <div class="footer-right">Built with HTML · CSS · JS</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
